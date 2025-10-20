@@ -45,7 +45,7 @@ def multiply_me():
 @app.route('/cube_me', methods=['POST'])
 def cube_me():
     """
-    Method that cubs a number
+    Method that cubes a number
     :return: str
     """
     data_string = request.get_data()

@@ -5,18 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.datasets import load_wine
 from torch.utils.data import TensorDataset, DataLoader
 import matplotlib.pyplot as plt
-from functools import wraps
-from time import time
-
-def timing(f):
-    @wraps(f)
-    def wrap(*args, **kwargs):
-        time_start = time()
-        result = f(*args, **kwargs)
-        time_end = time()
-        print(f"Finished {f.__name__} in {time_end - time_start} seconds.")
-        return result
-    return wrap
+from essential_functions import timing
 
 @timing
 def mini_batching(size):
