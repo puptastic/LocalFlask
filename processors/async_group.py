@@ -91,7 +91,7 @@ async def main2():
     print(f"\nData insights on $/Hour: mean={mean:.2f}, std={std:.2f}, median={median:.2f}")
 
     result_df2 = sqldf(query2)
-    print(f"\n\n{result_df2.to_string()}")
+    print(f"\n{result_df2.to_string()}")
 
 if __name__ == '__main__':
     an.run(main2())
